@@ -21,9 +21,13 @@ def calculate():
 root = tk.Tk()
 root.title("Calculadora")
 
+# Crear un banner que diga "Calculadora de ejemplo"
+banner = tk.Label(root, text="Calculadora de ejemplo", font=("Arial", 16))
+banner.grid(row=0, column=0, columnspan=4, pady=10)
+
 # Crear la entrada
 entry = tk.Entry(root, width=30, font=("Arial", 14))
-entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
+entry.grid(row=1, column=0, columnspan=4, padx=10, pady=10)
 
 # Definir los botones
 buttons = [
@@ -35,7 +39,7 @@ buttons = [
 ]
 
 # Añadir los botones a la interfaz
-row = 1
+row = 2
 col = 0
 for button in buttons:
     if button == "=":
